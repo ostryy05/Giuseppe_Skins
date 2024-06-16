@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    background-color: #15171b;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;  /* ancho de la escrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 171, 16); /* color de la scrollbar */
+  border-radius: 20px; /* border radius de la misma*/
+}
+
+header { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #15171b;
+  color: white;
+}
+
+.logoynombre{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+} 
+
+#logo{
+  height: 50px;
+} 
+
+#nombre {
+  color: orange;
+  margin: 0;
+  height: 65px;
+}
+
+
+#carrito > img {
+  height: 45px;
+} 
+
+.supercontainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container-carousel {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+
+}
+
+.carruseles {
+  width: 1000%;
+  height: 100%;
+  display: flex;
+}
+
+.slider-section {
+  width: calc(100% / 10);
+  height: 100%;
+}
+
+.slider-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.btn-left,
+.btn-right {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #ffffff81;
+  transform: translate(0,-50%);
+  transition: .5s ease;
+  user-select: none;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+  background-color: #333333d4;
+  color: #fff;
+}
+
+.btn-left {
+  left: 10px;
+}
+
+.btn-right {
+  right: 10px;
+}
+
+
+/* #armas1 {
+  grid-area: armas1;
+}
+#armas2 {
+  grid-area: armas2;
+}
+#armas3 {
+  grid-area: armas3;
+} */
+
+#video {
+  grid-area: main;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  padding: 5px;
+}
+/* #contacto {
+  grid-area: contacto;
+}
+#nada {
+  grid-area: nada;
+}
+#comentarios {
+  grid-area: comentarios;
+} */
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  font-size: 2vh;
+  color: orange;
+}
+
+@media (max-width: 600px) {
+  .header {
+      flex-direction: column;
+  }
+
+  .logo, .title, .cart {
+      text-align: center;
+      padding: 5px;
+  }
+}
