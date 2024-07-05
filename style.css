@@ -25,19 +25,36 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #15171b;
-  color: white;
+  background-color: rgba(0, 0, 0, 0.048);
+
 }
 
+#gallina, #gallina2 {
+    position: relative;
+    cursor: pointer;
+    width: 5%;
+    transform: scaleX(-1);
+  }
+
+
 .logoynombre{
+  margin: 2%;
+  font-size: 10px;
+  font-family: "Anton SC", sans-serif;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  transition: 0.5s;
+  cursor: pointer;
 } 
-
+:hover.logoynombre{
+  text-shadow: rgba(255,162,0,0.9) 0px 0px 39px;
+}
 #logo{
-  height: 50px;
+  margin: 3%;
+  border-radius: 10px;
+  height: 55px;
 } 
 
 #nombre {
@@ -55,6 +72,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .container-carousel {
@@ -63,7 +81,6 @@ header {
   height: 300px;
   border-radius: 15px;
   overflow: hidden;
-
 }
 
 .carruseles {
@@ -115,17 +132,6 @@ header {
   right: 10px;
 }
 
-
-/* #armas1 {
-  grid-area: armas1;
-}
-#armas2 {
-  grid-area: armas2;
-}
-#armas3 {
-  grid-area: armas3;
-} */
-
 #video {
   grid-area: main;
   display: flex;
@@ -144,7 +150,38 @@ header {
   grid-area: comentarios;
 } */
 
+.tienda {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding:10% 0% 2%;
+}
+
+.item {
+  display: inline-block;
+  margin: 0px 20px 80px;
+  text-align: center;
+}
+
+.item img {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 100%;
+}
+
+.item p {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.precio{
+  padding-top: 2%;
+}
+
 footer {
+  margin-top: 10%;
   grid-area: footer;
   text-align: center;
   font-size: 2vh;
@@ -156,7 +193,7 @@ footer {
       flex-direction: column;
   }
 
-  .logo, .title, .cart {
+  .logoynombre, #carrito {
       text-align: center;
       padding: 5px;
   }
