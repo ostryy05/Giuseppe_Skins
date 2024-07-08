@@ -1,13 +1,19 @@
+//alert del carrito
+const carrito = document.querySelector("#carrito")
+carrito.addEventListener("click", function(){
+  alert("Aún no agregamos un carrito.")
+})
+
+//Se agrega un add event listener al modelo de los objetos del documento (el DOM, el "árbol" de la página) para que cuando termine de cargar se ejecute el movimiento de la gallina
 document.addEventListener('DOMContentLoaded', function() {
   var chicken = document.getElementById('gallina');
   var body = document.body;
   var start = Date.now(); // Tiempo de inicio de la animación
-  alert("¡Bienvenido a la página!")
-
 
   // Función para animar la gallina
   function animateChicken() {  
     
+    //Creamos un intervalo, es decir, una serie de acciones que se ejecuten cada cierto tiempo expresado en milisegundos (el de este timer y el timer 2 es cada 20 milisegundos, equivalente a 0.02 segundos)
     var timer = setInterval(function() {
       var timePassed = Date.now() - start; // Tiempo transcurrido desde el inicio
       var leftChicken = parseInt(chicken.style.left) || 0;
@@ -51,8 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Iniciar la animación cuando se carga el contenido
   animateChicken();
 });
-
-
 
 //Carrusel
 // Selección de elementos del DOM, con query selector llamamos a todos los selectores de css que coincidan con las siguientes clases y id.

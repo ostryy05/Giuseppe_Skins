@@ -31,11 +31,9 @@ header {
 
 #gallina, #gallina2 {
     position: relative;
-    cursor: pointer;
     width: 5%;
     transform: scaleX(-1);
   }
-
 
 .logoynombre{
   margin: 2%;
@@ -63,9 +61,9 @@ header {
   height: 65px;
 }
 
-
 #carrito > img {
   height: 45px;
+  cursor: pointer;
 } 
 
 .supercontainer{
@@ -133,22 +131,12 @@ header {
 }
 
 #video {
-  grid-area: main;
   display: flex;
   flex-direction: row;
   justify-content: center;
   overflow: hidden;
   padding: 5px;
 }
-/* #contacto {
-  grid-area: contacto;
-}
-#nada {
-  grid-area: nada;
-}
-#comentarios {
-  grid-area: comentarios;
-} */
 
 .tienda {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -181,11 +169,38 @@ header {
 }
 
 footer {
-  margin-top: 10%;
-  grid-area: footer;
+  margin-top: 5%;
+  background-color: black; /* Color de fondo del rectángulo */
   text-align: center;
   font-size: 2vh;
   color: orange;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.footer-container a {
+  color: orange;
+  text-decoration: none;
+  font-size: 1.8vh;
+  transition: color 0.3s;
+}
+
+.footer-container a:hover {
+  color: white;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1.5vh;
 }
 
 @media (max-width: 600px) {
