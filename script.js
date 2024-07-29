@@ -1,3 +1,12 @@
+document.querySelectorAll('.item img').forEach(img => {
+  img.addEventListener('mouseover', ()=> {
+    img.classList.add('enlarged');
+  });
+  img.addEventListener('mouseout', ()=> {
+    img.classList.remove('enlarged');
+  });
+})
+
 //alert del carrito
 const carrito = document.querySelector("#carrito")
 carrito.addEventListener("click", function(){
