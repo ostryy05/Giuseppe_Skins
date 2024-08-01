@@ -13,6 +13,38 @@ carrito.addEventListener("click", function(){
   alert("Aún no agregamos un carrito.")
 })
 
+//area expandible
+function showDetails(item) {
+  // Obtener los detalles del artículo
+  const imageSrc = item.querySelector('.item-image').src;
+  const title = item.querySelector('.item-title').textContent;
+  const price = item.querySelector('.item-price').textContent;
+
+  // Actualizar el contenido del detalle
+  document.getElementById('details-image').src = imageSrc;
+  document.getElementById('details-title').textContent = title;
+  document.getElementById('details-description').textContent = 'Descripción del artículo.';
+  document.getElementById('details-price').textContent = price;
+
+  // Mostrar el contenedor de detalles
+  document.getElementById('details').style.display = 'block';
+}
+
+function addToCart() {
+  alert('Artículo agregado al carrito.');
+  // Aquí podrías agregar lógica para agregar al carrito
+  closeDetails();
+}
+
+// Cerrar contenedor de detalles
+function closeDetails() {
+  document.getElementById('details').style.display = 'none';
+}
+
+
+
+
+
 //Se agrega un add event listener al modelo de los objetos del documento (el DOM, el "árbol" de la página) para que cuando termine de cargar se ejecute el movimiento de la gallina
 document.addEventListener('DOMContentLoaded', function() {
   var chicken = document.getElementById('gallina');
@@ -39,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Posicionar la gallina para la segunda animación (abajo a la derecha)
         chicken.style.left = '0px'; // Reiniciar posición a la izquierda
-        chicken.style.top = '50vh'; // Posicionar en la parte inferior de la pantalla
+        chicken.style.top = '55vh'; // Posicionar en la parte inferior de la pantalla
         chicken.style.display = 'block'; // Mostrar la gallina nuevamente
 
         start = Date.now(); // Reiniciar tiempo de inicio para la segunda animación
