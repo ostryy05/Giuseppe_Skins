@@ -20,10 +20,15 @@ function showDetails(item) {
   const title = item.querySelector('.item-title').textContent;
   const price = item.querySelector('.item-price').textContent;
 
+  const titlesList = ["Karambit","M9 Bayonet","M4A1-S","Desert Eagle","AK-47", "Nightmare", "USP-S", "Nightwish", "The Emperor", "Decimator", "Fade", "Mjölnir", "Bloodsport", "Black Nile"]
+  const descriptionsList = ["descripción de la karambit", "descripción 2"]
+
   // Actualizar el contenido del detalle
   document.getElementById('details-image').src = imageSrc;
   document.getElementById('details-title').textContent = title;
-  document.getElementById('details-description').textContent = 'Descripción del artículo.';
+  let position = titlesList.indexOf(title)
+
+  document.getElementById('details-description').textContent = descriptionsList[position];
   document.getElementById('details-price').textContent = price;
 
   // Mostrar el contenedor de detalles
